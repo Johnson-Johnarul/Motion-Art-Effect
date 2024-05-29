@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Cards from "./components/Cards";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Ratings from "./components/Ratings";
+import Section from "./components/Section";
 
+const ratingInfo = [
+  {
+    id: "1",
+    image: "images/motionarteffect-img2.png",
+    ratingImage: "images/motionarteffect-img4.png",
+    score: "4.5",
+    reviews: 9,
+  },
+  {
+    id: "2",
+    image: "images/motionarteffect-img1.png",
+    ratingImage: "images/motionarteffect-img4.png",
+    score: "4.4",
+    reviews: 6,
+  },
+  {
+    id: "3",
+    image: "images/motionarteffect-img3.png",
+    ratingImage: "images/motionarteffect-img4.png",
+    score: "4.2",
+    reviews: 8,
+  },
+];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" bg-darkVoilet font-sora w-screen min-h-screen">
+      <Home />
+      <Ratings ratingInfo={ratingInfo} />
+      <Section />
+      <Cards />
+      <Footer />
     </div>
   );
 }
